@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.select-dropdown {
+    font-size: 20px;
+    color: white;
+    background-color: #33FF61;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -26,6 +32,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.span-right {
+    display: inline-flex;
+    align-items: center;
+}
+
+.desk {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    position: relative;
+    left: 2%;
+    bottom: 1%;
 }
 
 @keyframes App-logo-spin {
