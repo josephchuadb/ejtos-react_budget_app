@@ -75,7 +75,7 @@ const AllocationForm = (props) => {
                     </select>
 
                     <div className="desk">
-                        <span className="span-right">$</span>
+                        <span className="span-right">£</span>
                     </div>
                     <input
                         required='required'

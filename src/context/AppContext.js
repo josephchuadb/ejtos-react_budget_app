@@ -30,6 +30,24 @@ export const AppReducer = (state, action) => {
                     ...state
                 }
             }
+        case 'REDUCE_EXPENSE':
+                action.type = "DONE";
+                state.expenses.map((currentExp)=> {
+                    if (currentExp.name === action.payload) {
+                        // budget = state.budget + currentExp.cost
+                        // currentExp.cost =  0;
+                        budget = currentExp.cost - 10;
+                        currentExp.cost =  budget;
+                    }
+                    return currentExp
+                })
+                action.type = "DONE";
+                return {
+                    ...state,
+                    budget
+                };
+
+                /*
             case 'RED_EXPENSE':
                 const red_expenses = state.expenses.map((currentExp)=> {
                     if (currentExp.name === action.payload.name && currentExp.cost - action.payload.cost >= 0) {
@@ -38,17 +56,22 @@ export const AppReducer = (state, action) => {
                     }
                     return currentExp
                 })
+            
                 action.type = "DONE";
                 return {
                     ...state,
                     expenses: [...red_expenses],
                 };
-            case 'DELETE_EXPENSE':
+                */
+
+        case 'DELETE_EXPENSE':
             action.type = "DONE";
             state.expenses.map((currentExp)=> {
                 if (currentExp.name === action.payload) {
                     budget = state.budget + currentExp.cost
                     currentExp.cost =  0;
+                    // budget = currentExp.cost - 10;
+                    // currentExp.cost =  budget;
                 }
                 return currentExp
             })
@@ -80,13 +103,13 @@ export const AppReducer = (state, action) => {
 const initialState = {
     budget: 2000,
     expenses: [
-        { id: "Marketing", name: 'Marketing', cost: 750 },
+        { id: "Marketing", name: 'Marketing', cost: 60 },
         { id: "Finance", name: 'Finance', cost: 300 },
         { id: "Sales", name: 'Sales', cost: 70 },
         { id: "Human Resource", name: 'Human Resource', cost: 40 },
         { id: "IT", name: 'IT', cost: 500 },
     ],
-    currency: '$'
+    currency: '£'
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state

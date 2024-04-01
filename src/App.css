@@ -8,10 +8,48 @@
 }
 
 .select-dropdown {
+    width:300px;
     font-size: 20px;
     color: white;
-    background-color: #33FF61;
-}
+    background: none repeat scroll 0 0 #60da7c;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px 8px 8px 8px;
+    height: 60px;
+    margin-left: -45px;
+    padding-left: 50px;
+  }
+  
+  .currency-dropdown {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  .increaseIcon {
+    width: 30px;
+    height: 30px;
+    background: none repeat scroll 0 0 limegreen;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    color: white;
+  }
+
+  .decreaseIcon {
+    width: 30px;
+    height: 30px;
+    background: none repeat scroll 0 0 #DE4117;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    color: white;
+  }
+
+  .deleteIcon {
+    width: 30px;
+    height: 30px;
+    background: none repeat scroll 0 0 black;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    color: white;
+  }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
